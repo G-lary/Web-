@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style_3.css">
+    <script>
+        window.onload = function () {
+            document.getElementById("email").onclick = function () {
+                this.setAttribute("style","color:red")
+                this.innerHTML = "别点！是假的";
+            }
+            document.getElementById("git").onclick = function () {
+                this.setAttribute("style","color:red")
+                this.innerHTML = "别急 还没弄";
+            }
+            document.getElementById("none").onclick = function() {
+                var all = document.getElementById("all");
+                all.setAttribute("class","all")
+                var sup = document.getElementById("sup");
+                sup.removeAttribute("id","sup");
+
+            }
+        }
+    </script>
+</head>
+<body>
+<div  id="all">
+    <div class="nav">
+        <h1>简历</h1>
+    </div>
+    <div class="box">
+        <h3>基本信息</h3>
+        <span><strong>姓名</strong>&nbsp;&nbsp;张三</span>
+        <span><strong>性别</strong>&nbsp;&nbsp;男</span>
+        <span><strong>应聘职位</strong>&nbsp;&nbsp;百度前端工程师</span>
+    </div>
+    <div class="box">
+        <h3>联系方式</h3>
+        <span><strong>手机</strong>&nbsp;&nbsp;1231231234</span>
+        <span><strong>Email</strong>&nbsp;&nbsp;<a href="#" id="email">123123123@baidu.com</a></span>
+        <span><strong>个人主页</strong>&nbsp;&nbsp;<a href="#" id="git">Github</a></span>
+    </div>
+    <div class="box">
+        <h3>能力描述</h3>
+        <div class="left">
+            <p class="attr"><strong>技能能力</strong></p>
+            <p>熟练掌握Html,CSS,JAVAScript</p>
+        </div>
+        <div class="left">
+            <p class="attr"><strong>综合能力</strong></p>
+            <p>良好的沟通,主动积极,努力勤奋</p>
+        </div>
+    </div>
+    <div class="box">
+        <h3>教育经历</h3>
+        <div class="left">
+            <p class="attr"><strong>本科</strong></p>
+            <p>百度前端技术学院小薇学院</p>
+        </div>
+        <div class="left">
+            <p class="attr"><strong>研究生</strong></p>
+            <p>百度前端技术学院大斌学院</p>
+        </div>
+    </div>
+    <div class="box" id="sup">
+        <h3>项目经历</h3>
+        <div class="left">
+            <p class="attr"><strong>小度小度</strong></p>
+            <p>作为前端工程师角色参加了ABC组件的开发</p>
+        </div>
+        <div class="left">
+            <p class="attr"><strong>SAN Doc</strong></p>
+            <p>作为文档工程师参与了SAN Doc的编写</p>
+        </div>
+    </div>
+
+</div>
+<input type="button" id="none" value="请点击"/>
+</body>
+</html>
